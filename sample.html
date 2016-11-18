@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="sample.css">
+
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="https://raw.github.com/javierjulio/textarea-autosize/master/dist/jquery.textarea_autosize.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="sample.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+    <div class="qnaInputContainer" on-resize="$ctrl.handleResize()"><span class="glyphicon pbi-glyph-qna icon" ng-click="$ctrl.selectUtterance()"></span>
+        <div id="box"><textarea id="content" type="text" placeholder="sentiment gap" spellcheck="false" autofocus=""></textarea>
+            <div id="utterance">
+                <div id="utteranceContent"><span class="term recognized bindings replacements row"><span class="term-main selected" ng-click="toggle()">sentiment&nbsp;gap</span>
+                    <ul
+                        ng-style="blah ? {'display': 'block'} :{'display': 'none'}"
+                        style="display: block;">
+                        <li class="selected">
+                            <div>sentiment gap</div>
+                            <div class="replacementDetail">(SalesFact &gt; Sentiment Gap)</div>
+                        </li>
+                        <li>
+                            <div>total unit</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total Units)</div>
+                        </li>
+                        <li>
+                            <div>sales $</div>
+                            <div class="replacementDetail">(SalesFact &gt; Sales $)</div>
+                        </li>
+                        <li>
+                            <div>sentiment</div>
+                            <div class="replacementDetail">(SalesFact &gt; Sentiment)</div>
+                        </li>
+                        <li>
+                            <div>total units YTD</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total Units YTD)</div>
+                        </li>
+                        <li>
+                            <div>total van arsdel units YTD</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total VanArsdel Units YTD)</div>
+                        </li>
+                        <li>
+                            <div>total OTHER units YTD</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total OTHER Units YTD)</div>
+                        </li>
+                        <li>
+                            <div>total van arsdel unit</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total VanArsdel Units)</div>
+                        </li>
+                        <li>
+                            <div>total OTHER unit</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total OTHER Units)</div>
+                        </li>
+                        <li>
+                            <div>percent units market share</div>
+                            <div class="replacementDetail">(SalesFact &gt; % Units Market Share)</div>
+                        </li>
+                        <li>
+                            <div>total category volume</div>
+                            <div class="replacementDetail">(SalesFact &gt; Total Category Volume)</div>
+                        </li>
+                        </ul>
+                        </span><span class="term recognized space"><span class="term-main">&nbsp;</span></span>
+                </div>
+            </div>
+        </div>
+
+<script>
+$('textarea').textareaAutoSize();
+</script>
+</body>
+
+</html>
